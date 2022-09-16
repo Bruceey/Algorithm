@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project(Algorithm)
+
+set(CMAKE_CXX_STANDARD 14)
+
+add_executable(Algorithm main.cpp Sort/mergeSort.h algorithms.h Sort/quickSort.h Sort/heapSort.h Divide_and_Conquer/maxSubArraySum.h doublePointer/Pointer1.h doublePointer/Pointer2.h doublePointer/numSubArraySumIsK.h doublePointer/subArraySum.h string_/checkInclusion.h string_/findAnagrams.h stack_/asteroidCollision.h stack_/dailyTemperatures.h stack_/largestRectangleArea.h stack_/trap.h string_/longestPalindrome.h trie/Tire.h dynamic_programming/bottomUpCutRod.h dynamic_programming/LCS.h All/1_two_sum.h All/2_addTwoNumbers.h All/3_lengthOfLongestSubstring.h All/5_longestPalindrome.h All/9_isPalindrome.h All/7_reverse.h All/1619_trimMean.h All/algorithm_plan/704_search.h All/algorithm_plan/21_mergeTwoLists.h All/algorithm_plan/977_sortedSquares.h gcd.h All/algorithm_plan/189_rotate.h All/algorithm_plan/310_findMinHeightTrees.h)

@@ -1,0 +1,69 @@
+1. INT_MAX和INT_MIN在#include <climits>头文件中
+
+2. memset在#include <cstring>头文件中
+
+3. vector<int> v = {1, 2, 3, 4, 5}
+
+4. set默认从小到达排序，若想自定义排序方法，则需要定义一个比较器，并重载“()”或者时定义一个函数指针
+// constructing sets
+#include <iostream>
+#include <set>
+
+bool fncomp (int lhs, int rhs) {return lhs<rhs;}
+
+struct classcomp {
+  bool operator() (const int& lhs, const int& rhs) const
+  {return lhs<rhs;}
+};
+
+int main ()
+{
+  std::set<int> first;                           // empty set of ints
+
+  int myints[]= {10,20,30,40,50};
+  std::set<int> second (myints,myints+5);        // range
+
+  std::set<int> third (second);                  // a copy of second
+
+  std::set<int> fourth (second.begin(), second.end());  // iterator ctor.
+
+  std::set<int,classcomp> fifth;                 // class as Compare
+
+  bool(*fn_pt)(int,int) = fncomp;
+  std::set<int,bool(*)(int,int)> sixth (fn_pt);  // function pointer as Compare
+
+  return 0;
+}
+总结：
+(1) set里面的值是唯一的，可以插入重复值，不会报错
+(2) unordered_set中插入数据是无序的，类似Python的set
+(3) set中插入数据是有序的，即所有元素默认按自然顺序排序
+
+5. 子串是连续的，子序列可以是连续也可以是不连续的
+
+6. string s; 和 string s = ""; 两者等同
+
+7. l2 = make_pair(left + 1, right - 1);
+   start = l2.first; //取值
+   end = l2.second;
+
+8. while() {}        while括号里面的变量可以用到花括号中
+   do {} while()     花括号里面新定义的变量不能作用在while()
+
+9. 取余规则：
+(1) 相同点：
+        同号取余：Python、C/C++、Java，都让商越小越好
+(2) 不同点：
+        异号取余：Python仍然是让商越小越好，C/C++、Java是让商越大越好
+最终简化看法：
+    C/C++、Java，先都按正整数取余来计算余数，余数的符号由被除数决定
+    Python，余数的符号由除数决定
+eg:
+            C/C++、Java      Python
+-7 % -5     1...-2           1...-2
+-7 % 5      -1...-2          -2...3     #前者看被除数，后者看除数
+7 % -5      -1...2           -2...-3    #前者看被除数，后者看除数
+
+10. rand()在#include <cstdlib>中，rand() 返回一随机整数值的范围在 0 至 RAND_MAX(至少为32767)间，适合小范围使用
+
+11. 声明一个自定义变量就会调用其默认构造函数
