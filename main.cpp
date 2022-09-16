@@ -1,6 +1,6 @@
 #include <iostream>
 //#include "algorithms.h"
-#include "./All/1619_trimMean.h"
+#include "./All/algorithm_plan/283_moveZeroes.h"
 using namespace std;
 
 #include <set>
@@ -40,5 +40,8 @@ int main() {
         if (i % 5 == 0) i += 20;
         cout << i << " ";
     }
+    cout << endl;
+
+    moveZeroesTest();
     return 0;
 }
