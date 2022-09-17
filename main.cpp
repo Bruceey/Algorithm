@@ -1,6 +1,6 @@
 #include <iostream>
 //#include "algorithms.h"
-#include "./All/algorithm_plan/283_moveZeroes.h"
+#include "./All/algorithm_plan/907_sumSubarrayMins.h"
 using namespace std;
 
 #include <set>
@@ -36,12 +36,6 @@ int main() {
 
 //    cout << (int)nullptr + 3;
 
-    for (int i = 0; i < 100; i++) {
-        if (i % 5 == 0) i += 20;
-        cout << i << " ";
-    }
-    cout << endl;
-
-    moveZeroesTest();
+    testSumSubarrayMins();
     return 0;
 }

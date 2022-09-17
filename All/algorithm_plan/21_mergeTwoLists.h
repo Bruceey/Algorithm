@@ -6,19 +6,9 @@
 #define ALGORITHM_21_MERGETWOLISTS_H
 
 #include <algorithm>
+#include "../ListNode.h"
 using namespace std;
 
-//Definition for singly-linked list.
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    ListNode() : val(0), next(nullptr) {}
-
-    ListNode(int x) : val(x), next(nullptr) {}
-
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
 
 class Solution2 {
@@ -31,7 +21,7 @@ public:
             pNode->next = list1;
             pNode = pNode->next;
             list1 = list1->next;
-        } //此时list1和list2两者至少有一个为空
+        }
         pNode->next = list1 ? list1 : list2;
         return header.next;
     }

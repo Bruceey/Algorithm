@@ -5,23 +5,14 @@
 #ifndef ALGORITHM_2_ADDTWONUMBERS_H
 #define ALGORITHM_2_ADDTWONUMBERS_H
 
+#include "ListNode.h"
+
 // 2. 两数相加
 //输入：l1 = [2,4,3], l2 = [5,6,4]
 //输出：[7,0,8]
 //解释：342 + 465 = 807.
 
 
-
-struct ListNode {
-    int val;
-    ListNode *next;
-
-    ListNode() : val(0), next(nullptr) {}
-
-    ListNode(int x) : val(x), next(nullptr) {}
-
-    ListNode(int x, ListNode *next) : val(x), next(next) {}
-};
 
 ListNode *addTwoNumbers2(ListNode *l1, ListNode *l2) {
     ListNode* header = nullptr;
