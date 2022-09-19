@@ -1,6 +1,7 @@
 #include <iostream>
 //#include "algorithms.h"
-#include "./All/algorithm_plan/907_sumSubarrayMins.h"
+//#include "./All/algorithm_plan/907_sumSubarrayMins.h"
+#include "./All/136_singleNumber.h"
 using namespace std;
 
 #include <set>
@@ -36,6 +37,6 @@ int main() {
 
 //    cout << (int)nullptr + 3;
 
-    testSumSubarrayMins();
+    testSingleNumber();
     return 0;
 }
